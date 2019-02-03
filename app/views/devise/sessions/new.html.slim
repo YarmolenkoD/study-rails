@@ -1,6 +1,11 @@
 .authentication-page-wrapper
-  .container
-    section.recent-logins
-
-    section.registration
-      = render '/registration-form'
+  .sections-wrapper
+    .container
+      section.recent-logins
+        = render '/recent-logins'
+      section.registration
+        = render '/registration-form'
+  footer
+    .container
+      p.copyright
+        | GeekHub 2019

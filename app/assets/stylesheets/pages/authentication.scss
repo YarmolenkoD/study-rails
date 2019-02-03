@@ -1,0 +1,20 @@
+.authentication-page-wrapper {
+  .sections-wrapper {
+    padding: 20px 0;
+    background-color: #e9ebee;
+    .container {
+      display: flex;
+    }
+    section {
+      width: 50%;
+    }
+  }
+  footer {
+    padding: 50px 0;
+    background-color: #fff;
+    .copyright {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
