@@ -1,0 +1,24 @@
+.heading-container
+  h2.title
+    | Create a New Account
+  p.description
+    | It’s free and always will be.
+
+
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  .field
+    = f.label :email
+    = f.email_field :email, autofocus: true, autocomplete: "email"
+  .field
+    = f.label :password
+    -if @minimum_password_length
+      = @minimum_password_length + "characters minimum"
+    = f.password_field :password, autocomplete: "new-password"
+
+  .field
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, autocomplete: "new-password"
+
+  .actions
+    = f.submit "Sign up"

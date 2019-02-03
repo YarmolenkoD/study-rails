@@ -1,0 +1,28 @@
+header
+  .container
+    .header-wrapper
+      - if user_signed_in?
+
+      - else
+        .logo-wrapper
+          h1
+            | Facebook
+        .login-wrapper
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            .inputs-wrap
+              .input-field
+                span
+                  = f.label :email
+                = f.email_field :email, autocomplete: "email"
+              .input-field
+                span
+                  = f.label :password
+                = f.password_field :password, autocomplete: "current-password"
+              .login-button
+                = f.submit "Log in"
+            .forgot-link-wrap
+
+
+
+
+
