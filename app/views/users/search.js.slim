@@ -1,0 +1,14 @@
+|
+  var usersList = document.getElementById('users-list')
+  var users = JSON.parse("#{j(@users.to_json)}".replace(/&quot;/g, "\""))
+  console.log(11111, users)
+  usersList.innerHTML = ''
+  for (var i = 0; i < users.length; i++) {
+    var li = document.createElement('li')
+    var a = document.createElement('a')
+    a.target = '_blank'
+    a.href = '/user/' + users[i].id
+    a.innerText = users[i].email
+    li.appendChild(a)
+    usersList.appendChild(li)
+  }
